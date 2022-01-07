@@ -63,7 +63,8 @@ test_nginx_process() {
     echo -e "${bldyel}================== TESTING =====================${txtrst}"
     echo -e "${bldyel}>>> Spawning nginx${txtrst}"
     echo -en "${bldred}"
-    coproc $PREFIX/bin/nginx
+    #coproc ${CONDA_PREFIX}/bin/nginx
+    coproc nginx
     echo -en "${txtrst}"
 
     http_test "http://localhost:8080/"
